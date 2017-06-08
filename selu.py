@@ -22,7 +22,8 @@ def selu(x):
         return scale*tf.where(x>=0.0, x, alpha*tf.nn.elu(x))
 
 
-def dropout_selu(x, rate, alpha=-1.7580993408473766, noise_shape=None, seed=None, name=None, training=False):
+def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedPointVar=1.0, 
+                 noise_shape=None, seed=None, name=None, training=False):
     """Dropout to a value with rescaling."""
 
     def dropout_selu_impl(x, rate, alpha, noise_shape, seed, name):
@@ -37,27 +38,19 @@ def dropout_selu(x, rate, alpha=-1.7580993408473766, noise_shape=None, seed=None
         alpha = ops.convert_to_tensor(alpha, dtype=x.dtype, name="alpha")
         keep_prob.get_shape().assert_is_compatible_with(tensor_shape.scalar())
 
-        # Do nothing if we know keep_prob == 1
         if tensor_util.constant_value(keep_prob) == 1:
             return x
 
         noise_shape = noise_shape if noise_shape is not None else array_ops.shape(x)
-        # uniform [keep_prob, 1.0 + keep_prob)
         random_tensor = keep_prob
         random_tensor += random_ops.random_uniform(noise_shape, seed=seed, dtype=x.dtype)
-        # 0. if [keep_prob, 1.0) and 1. if [1.0, 1.0 + keep_prob)
         binary_tensor = math_ops.floor(random_tensor)
-        #binary_tensor2 = math_ops.ceil(random_tensor)
         ret = x * binary_tensor + alpha * (1-binary_tensor)
 
-        #a = tf.sqrt(1.0/(keep_prob+alpha^2*keep_prob*(1.0-keep_prob)))
-        a = tf.sqrt(1.0 / keep_prob + tf.pow(alpha,2) * keep_prob * 1.0 - keep_prob)
-        #a = tf.sqrt(tf.div(1.0, tf.add(keep_prob ,tf.multiply(tf.pow(alpha,2) , tf.multiply(keep_prob,    tf.subtract(1.0,keep_prob)))) ))
+        a = tf.sqrt(fixedPointVar / (keep_prob *((1-keep_prob) * tf.pow(alpha-fixedPointMean,2) + fixedPointVar)))
 
-        b = -a * (1 - keep_prob) * alpha
-        #b = tf.neg( tf.mul(a , (tf.multiply(tf.subtract(1.0,keep_prob),alpha))))
+        b = fixedPointMean - a * (keep_prob * fixedPointMean + (1 - keep_prob) * alpha)
         ret = a * ret + b
-        #ret = tf.add(tf.multiply(a , ret) , b)
         ret.set_shape(x.get_shape())
         return ret
 
@@ -65,3 +58,4 @@ def dropout_selu(x, rate, alpha=-1.7580993408473766, noise_shape=None, seed=None
         return utils.smart_cond(training,
             lambda: dropout_selu_impl(x, rate, alpha, noise_shape, seed, name),
             lambda: array_ops.identity(x))
+
