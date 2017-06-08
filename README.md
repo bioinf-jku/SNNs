@@ -7,14 +7,14 @@ Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested
 - Other: Python 3.5. and Tensorflow 0.11
 
 ## Tutorials
-- Multilayer Perceptron ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_MLP_MNIST.ipynb))
-- Convolutional Neural Network ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_CNN_MNIST.ipynb))
+- Multilayer Perceptron ([notebook](https://github.com/gklambauer/SelfNormalizingNetworks/blob/master/SelfNormalizingNetworks_MLP_MNIST.ipynb))
+- Convolutional Neural Network ([notebook](https://github.com/gklambauer/SelfNormalizingNetworks/blob/master/SelfNormalizingNetworks_CNN_MNIST.ipynb))
 
 ## Design novel SELU functions
-- How to obtain the SELU parameters alpha and lambda for arbitrary fixed points ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/getSELUparameters.ipynb))
+- How to obtain the SELU parameters alpha and lambda for arbitrary fixed points ([notebook](https://github.com/gklambauer/SelfNormalizingNetworks/blob/master/getSELUparameters.ipynb))
 
 ## Basic python functions to implement SNNs
-are provided as code chunks here: [selu.py](https://github.com/bioinf-jku/SNNs/blob/master/selu.py)
+are provided as code chunks here: [selu.py](https://github.com/gklambauer/SelfNormalizingNetworks/blob/master/selu.py)
 
 ## Experiments on UCI, Tox21 and HTRU2 data sets
 Under preparation.
