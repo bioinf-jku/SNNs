@@ -1,5 +1,5 @@
 # SelfNormalizingNetworks
-Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested by Klambauer et al. (2017). 
+Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested by Klambauer et al. ([arXiv pre-print](https://arxiv.org/pdf/1706.02515.pdf)). 
 
 ## Versions
 - Tutorials: Python 3.5. and Tensorflow 1.1.
