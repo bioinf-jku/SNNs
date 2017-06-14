@@ -26,7 +26,8 @@ def selu(x):
 
 
 # (3) initialize weights with stddev sqrt(1/n)
-
+# e.g. use:
+initializer = tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_IN')
 
 
 # (4) use this dropout

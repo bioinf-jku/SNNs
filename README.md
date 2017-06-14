@@ -8,7 +8,8 @@ Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested
 
 ## Tutorials
 - Multilayer Perceptron ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_MLP_MNIST.ipynb))
-- Convolutional Neural Network ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_CNN_MNIST.ipynb))
+- Convolutional Neural Network on MNIST([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_CNN_MNIST.ipynb))
+- Convolutional Neural Network on CIFAR10([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_CNN_CIFAR10.ipynb))
 
 ## Design novel SELU functions
 - How to obtain the SELU parameters alpha and lambda for arbitrary fixed points ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/getSELUparameters.ipynb))
