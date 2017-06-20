@@ -17,5 +17,14 @@ Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested
 ## Basic python functions to implement SNNs
 are provided as code chunks here: [selu.py](https://github.com/bioinf-jku/SNNs/blob/master/selu.py)
 
+## Notebooks and code to produce Figure 1
+provided here: [Figure1](https://github.com/bioinf-jku/SNNs/blob/master/figure1/)
+
+## Calculations and numeric checks of the theorems (Mathematica)
+are provided as mathematica notebooks here:
+
+- [Mathematica notebook](https://github.com/bioinf-jku/SNNs/blob/master/Calculations/SELU_calculations.nb)
+- [Mathematica PDF](https://github.com/bioinf-jku/SNNs/blob/master/Calculations/SELU_calculations.pdf)
+
 ## Experiments on UCI, Tox21 and HTRU2 data sets
 Under preparation.

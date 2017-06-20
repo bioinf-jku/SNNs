@@ -46,7 +46,7 @@ def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedP
         keep_prob.get_shape().assert_is_compatible_with(tensor_shape.scalar())
 
         alpha = ops.convert_to_tensor(alpha, dtype=x.dtype, name="alpha")
-        keep_prob.get_shape().assert_is_compatible_with(tensor_shape.scalar())
+        alpha.get_shape().assert_is_compatible_with(tensor_shape.scalar())
 
         if tensor_util.constant_value(keep_prob) == 1:
             return x
