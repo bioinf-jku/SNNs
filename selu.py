@@ -13,6 +13,7 @@ from tensorflow.python.ops import math_ops
 from tensorflow.python.ops import random_ops
 from tensorflow.python.ops import array_ops
 from tensorflow.python.layers import utils
+import tensorflow as tf
 
 # (1) scale inputs to zero mean and unit variance
 
@@ -27,11 +28,11 @@ def selu(x):
 
 # (3) initialize weights with stddev sqrt(1/n)
 # e.g. use:
-initializer = tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_IN')
+initializer = layers.variance_scaling_initializer(factor=1.0, mode='FAN_IN')
 
 
 # (4) use this dropout
-def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedPointVar=1.0, 
+def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedPointVar=1.0,
                  noise_shape=None, seed=None, name=None, training=False):
     """Dropout to a value with rescaling."""
 
@@ -56,7 +57,7 @@ def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedP
         binary_tensor = math_ops.floor(random_tensor)
         ret = x * binary_tensor + alpha * (1-binary_tensor)
 
-        a = tf.sqrt(fixedPointVar / (keep_prob *((1-keep_prob) * tf.pow(alpha-fixedPointMean,2) + fixedPointVar)))
+        a = math_ops.sqrt(fixedPointVar / (keep_prob *((1-keep_prob) * math_ops.pow(alpha-fixedPointMean,2) + fixedPointVar)))
 
         b = fixedPointMean - a * (keep_prob * fixedPointMean + (1 - keep_prob) * alpha)
         ret = a * ret + b
@@ -67,4 +68,3 @@ def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedP
         return utils.smart_cond(training,
             lambda: dropout_selu_impl(x, rate, alpha, noise_shape, seed, name),
             lambda: array_ops.identity(x))
-
