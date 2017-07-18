@@ -24,5 +24,8 @@ are provided as mathematica notebooks here:
 - [Mathematica notebook](https://github.com/bioinf-jku/SNNs/blob/master/Calculations/SELU_calculations.nb)
 - [Mathematica PDF](https://github.com/bioinf-jku/SNNs/blob/master/Calculations/SELU_calculations.pdf)
 
-## Experiments on UCI, Tox21 and HTRU2 data sets
-Under preparation.
+## UCI, Tox21 and HTRU2 data sets
+
+- [UCI](http://persoal.citius.usc.es/manuel.fernandez.delgado/papers/jmlr/data.tar.gz)
+- [Tox21](http://bioinf.jku.at/research/DeepTox/tox21.zip)
+- [HTRU2](https://archive.ics.uci.edu/ml/machine-learning-databases/00372/HTRU2.zip)
