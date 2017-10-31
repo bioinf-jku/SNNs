@@ -13,8 +13,8 @@ Tensorflow 1.4 already has the function "tf.nn.selu" and "tf.contrib.nn.alpha_dr
 - Convolutional Neural Network on CIFAR10 ([notebook](https://github.com/bioinf-jku/SNNs/blob/master/SelfNormalizingNetworks_CNN_CIFAR10.ipynb))
 
 ## KERAS CNN scripts:
-- KERAS: Convolutional Neural Network on MNIST ([python script](https://github.com/bioinf-jku/SNNs/blob/master/KERAS-CNN/MNIST-Conv-SELU.py))
-- KERAS: Convolutional Neural Network on CIFAR10 ([python script](https://github.com/bioinf-jku/SNNs/blob/master/KERAS-CNN/CIFAR10-Conv-SELU.py))
+- KERAS: Convolutional Neural Network on MNIST ([python script](https://github.com/bioinf-jku/SNNs/blob/master/Keras-CNN/MNIST-Conv-SELU.py))
+- KERAS: Convolutional Neural Network on CIFAR10 ([python script](https://github.com/bioinf-jku/SNNs/blob/master/Keras-CNN/CIFAR10-Conv-SELU.py))
 
 
 ## Design novel SELU functions
