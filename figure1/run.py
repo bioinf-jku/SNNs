@@ -20,15 +20,12 @@ def model(dataset, n_layers, n_hidden, activation, dropout_rate, use_batchnorm):
     if activation == 'relu':
         act_fn = tf.nn.relu
         init_scale = 2.0
-        dropout_fn = tf.layers.dropout
     elif activation == 'tanh':
         act_fn = tf.nn.tanh
         init_scale = 1.0
-        dropout_fn = tf.layers.dropout
     elif activation == 'selu':
         act_fn = utils.selu
         init_scale = 1.0
-        dropout_fn = utils.dropout_selu
     else:
         assert False, "Unknown activation"
 
