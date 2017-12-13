@@ -1,4 +1,4 @@
-# Models and architectures build on Self-Normalizing Networks
+# Models and architectures built on Self-Normalizing Networks
 
 ## GANs
 - [THINKING  LIKE  A  MACHINE - GENERATING  VISUAL RATIONALES WITH WASSERSTEIN GANS](https://pdfs.semanticscholar.org/dd4c/23a21b1199f34e5003e26d2171d02ba12d45.pdf): Both discriminator and generator trained without batch normalization.
