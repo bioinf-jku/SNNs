@@ -23,7 +23,7 @@
 unnecessary.
 - [Improving Palliative Care with Deep Learning](https://arxiv.org/abs/1711.06402): An 18-layer neural network with SELUs performed best.
 - [An Iterative Closest Points Approach to Neural Generative Models](https://arxiv.org/abs/1711.06562)
-- [Retrieval of Surface Ozone from UV-MFRSR Irradiances using Deep Learning](http://uvb.nrel.colostate.edu/UVB/publications/AGU-Retrieval-Surface-Ozone-Deep-Learning.pdf) 6-10 layer networks perform best. 
+- [Retrieval of Surface Ozone from UV-MFRSR Irradiances using Deep Learning](http://uvb.nrel.colostate.edu/UVB/publications/AGU-Retrieval-Surface-Ozone-Deep-Learning.pdf): 6-10 layer networks perform best. 
 
 
 ## Reinforcement Learning
