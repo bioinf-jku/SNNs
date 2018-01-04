@@ -23,9 +23,13 @@
 unnecessary.
 - [Improving Palliative Care with Deep Learning](https://arxiv.org/abs/1711.06402): An 18-layer neural network with SELUs performed best.
 - [An Iterative Closest Points Approach to Neural Generative Models](https://arxiv.org/abs/1711.06562)
+- [Retrieval of Surface Ozone from UV-MFRSR Irradiances using Deep Learning](http://uvb.nrel.colostate.edu/UVB/publications/AGU-Retrieval-Surface-Ozone-Deep-Learning.pdf) 6-10 layer networks perform best. 
+
 
 ## Reinforcement Learning
 - [Automated Cloud Provisioning on AWS using Deep Reinforcement Learning](https://arxiv.org/abs/1709.04305): Deep CNN architecture trained with SELUs.
+- [Learning to Run with Actor-Critic Ensemble](https://arxiv.org/abs/1712.08987): Second best method (actor-critic ensemble) at the NIPS2017 "Learning to Run" competition. They have
+tried several activation functions and found that the activation function of Scaled Exponential Linear Units (SELU) are superior to ReLU, Leaky ReLU, Tanh and Sigmoid.
 
 ## Autoencoders
 - [Replacement AutoEncoder: A Privacy-Preserving Algorithm for Sensory Data Analysis](https://arxiv.org/abs/1710.06564): Deep autoencoder trained with SELUs.
