@@ -6,6 +6,7 @@
  The  rate  between  SELU  and  SELU+BN proves  that  SELU  itself  has  the  convergence  quality  of  BN.
 
 ## Convolutional neural networks
+- [Effectiveness of Self Normalizing Neural Networks for Text Classification](https://arxiv.org/abs/1905.01338): Applied properties of SNN to CNN to give rise to new arechitecture SCNN (Self normalizaing CNN) which performed better than CNN in text classification.
 - [Solving internal covariate shift in deep learning with linked neurons](https://arxiv.org/abs/1712.02609): Show that ultra-deep CNNs without batch normalization can only be trained SELUs (except with the suggested method described by the authors).
 - [DCASE 2017 ACOUSTIC SCENE CLASSIFICATION USING CONVOLUTIONAL NEURAL NETWORK IN TIME SERIES](http://www.cs.tut.fi/sgn/arg/dcase2017/documents/challenge_technical_reports/DCASE2017_Biho_116.pdf): Deep CNN trained without batch normalization.
 - [Point-wise Convolutional Neural Network](https://arxiv.org/abs/1712.05245):  Training with SELU converges faster than training with ReLU; improved accuracy with SELU.
