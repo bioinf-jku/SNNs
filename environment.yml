@@ -1,0 +1,22 @@
+name: snn
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pip=21.0.1
+  - numpy=1.20.0
+  - scipy=1.6.0
+  - sympy=1.7.1
+  - pandas=1.2.2
+  - scikit-learn=0.24.1
+  - matplotlib=3.3.4
+  - jupyter=1.0.0
+  - tqdm=4.56.0
+  - tensorflow=2.3.0
+  # GPU compatibility, check your nvidia drivers to find what toolkit is supported by your GPU
+  - cudatoolkit=10.1
+  # Pytorch dependencies
+  - pytorch=1.7.1
+  - torchvision=0.8.2

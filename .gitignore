@@ -1,0 +1,5 @@
+*/.ipynb_checkpoints/*
+*/checkpoints/*
+*/data_set/*
+*/saved_models/*
+*/logs/*

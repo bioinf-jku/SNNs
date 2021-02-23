@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
 import os
-import sys
+
 from sklearn.preprocessing import StandardScaler
+
 import biutils  # used to load the dataset
 import utils
+
 
 def model(dataset, n_layers, n_hidden, activation, dropout_rate, use_batchnorm):
 
@@ -135,7 +137,7 @@ parser.add_argument("-g", "--gpuid", type=str, help='GPU to use (leave blank for
 parser.add_argument("--batchnorm", help='use batchnorm', action="store_true")
 parser.add_argument("--dropout", type=float, help='hidden dropout rate (implies input-dropout of 0.2)', default=0.0)
 parser.add_argument("--dataset", type=str, help='name of dataset', default='mnist_bgimg')
-parser.add_argument("--logdir", type=str, help='directory for TF logs and summaries', default="/publicwork/tom/selfregularizing_nets/logs")
+parser.add_argument("--logdir", type=str, help='directory for TF logs and summaries', default="logs")
 
 # by parsing the arguments already, we can bail out now instead of waiting
 # for TF to load, in case the arguments aren't ok
@@ -144,7 +146,6 @@ os.environ['CUDA_VISIBLE_DEVICES'] = args.gpuid
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.python.ops import clip_ops
 
 logdir_base = os.getcwd()
 run(args.depth, args.nhidden, args.epochs, args.learningrate, args.dataset,

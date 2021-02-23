@@ -1,0 +1,19 @@
+name: snn_tf1_compat
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pip=21.0.1
+  - numpy=1.20.0
+  - scipy=1.6.0
+  - sympy=1.7.1
+  - pandas=1.2.2
+  - scikit-learn=0.24.1
+  - matplotlib=3.3.4
+  - jupyter=1.0.0
+# CPU mode only, comment if using gpu mode
+#  - tensorflow=1.15.0
+# GPU mode, take take that your gpu might need a different cudatoolkit!
+  - cudatoolkit=10.0
+  - tensorflow-gpu=1.15.0

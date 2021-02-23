@@ -1,13 +1,12 @@
 # Adapted KERAS tutorial 
 
-from __future__ import print_function
-import keras
-from keras.datasets import mnist
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, AlphaDropout, Flatten
-from keras.layers import Conv2D, MaxPooling2D
-from keras import backend as K
-import numpy as np
+import tensorflow as tf
+import tensorflow.keras as keras
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, AlphaDropout, Flatten
+from tensorflow.keras.layers import Conv2D, MaxPooling2D
+from tensorflow.keras import backend as K
 
 
 batch_size = 128
@@ -16,6 +15,9 @@ epochs = 30
 
 # input image dimensions
 img_rows, img_cols = 28, 28
+
+# list devices so you can check whether your gpu is available
+print(tf.config.list_physical_devices())
 
 # the data, shuffled and split between train and test sets
 (x_train, y_train), (x_test, y_test) = mnist.load_data()

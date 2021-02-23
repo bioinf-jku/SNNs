@@ -1,6 +1,11 @@
 # Reproducing Figure 1
 
 This contains the code necessary to reproduce Figure 1 from the SNN paper. Note that the code uses the [biutils](https://github.com/untom/biutils) package to load the MNIST/CIFAR10 datasets.
+You can use
+
+`pip install git+https://github.com/untom/biutils.git`
+
+to easily install the package.
 
 The data for the plot was created by running
 

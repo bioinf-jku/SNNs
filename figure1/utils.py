@@ -3,18 +3,19 @@
 Tensorflow Implementation of the Scaled ELU function and Dropout
 '''
 
-from __future__ import absolute_import, division, print_function
 import numbers
+
+import numpy as np
+import tensorflow as tf
 from tensorflow.contrib import layers
 from tensorflow.python.framework import ops
 from tensorflow.python.framework import tensor_shape
 from tensorflow.python.framework import tensor_util
+from tensorflow.python.layers import utils
+from tensorflow.python.ops import array_ops
 from tensorflow.python.ops import math_ops
 from tensorflow.python.ops import random_ops
-from tensorflow.python.ops import array_ops
-from tensorflow.python.layers import utils
-import numpy as np
-import tensorflow as tf
+
 
 # (1) scale inputs to zero mean and unit variance
 
