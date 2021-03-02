@@ -7,11 +7,12 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, AlphaDropout, Flatten
 from tensorflow.keras.layers import Conv2D, MaxPooling2D
 from tensorflow.keras import backend as K
+import numpy as np
 
 
 batch_size = 128
 num_classes = 10
-epochs = 5
+epochs = 20
 
 # input image dimensions
 img_rows, img_cols = 28, 28
@@ -56,17 +57,15 @@ y_val = keras.utils.to_categorical(y_val, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
 model = Sequential()
-model.add(Conv2D(32, (3, 3),activation='selu',kernel_initializer='lecun_normal',bias_initializer='zeros'))
-model.add(Conv2D(64, (3, 3), activation='selu',kernel_initializer='lecun_normal',bias_initializer='zeros'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(AlphaDropout(0.05))
 model.add(Flatten())
 model.add(Dense(512, activation='selu',kernel_initializer='lecun_normal',bias_initializer='zeros'))
+model.add(AlphaDropout(0.05))
+model.add(Dense(256, activation='selu',kernel_initializer='lecun_normal',bias_initializer='zeros'))
 model.add(AlphaDropout(0.05))
 model.add(Dense(num_classes, activation='softmax',kernel_initializer='lecun_normal',bias_initializer='zeros'))
 
 model.compile(loss=keras.losses.categorical_crossentropy,
-              optimizer=keras.optimizers.Adam(learning_rate=1e-3),
+              optimizer=keras.optimizers.Adam(learning_rate=0.001),
               metrics=['accuracy'])
 
 model.fit(x_train, y_train,
@@ -78,5 +77,4 @@ model.fit(x_train, y_train,
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
-
 
