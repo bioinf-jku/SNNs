@@ -18,7 +18,7 @@ as this is identical to lecun initialisation (mode='fan_in') with a gain of 1 (n
 ## Tutorials
 
 ### Tensorflow 1.x 
-- Multilayer Perceptron ([notebook](TF_1_x/SelfNormalizingNetworks_MLP_MNIST.ipynb))
+- Multilayer Perceptron on MNIST ([notebook](TF_1_x/SelfNormalizingNetworks_MLP_MNIST.ipynb))
 - Convolutional Neural Network on MNIST ([notebook](TF_1_x/SelfNormalizingNetworks_CNN_MNIST.ipynb))
 - Convolutional Neural Network on CIFAR10 ([notebook](TF_1_x/SelfNormalizingNetworks_CNN_CIFAR10.ipynb))
 
@@ -29,7 +29,7 @@ as this is identical to lecun initialisation (mode='fan_in') with a gain of 1 (n
 
 ### Pytorch
 
-- Multilayer Perceptron ([notebook](Pytorch/SelfNormalizingNetworks_MLP_MNIST.ipynb))
+- Multilayer Perceptron on MNIST ([notebook](Pytorch/SelfNormalizingNetworks_MLP_MNIST.ipynb))
 - Convolutional Neural Network on MNIST ([notebook](Pytorch/SelfNormalizingNetworks_CNN_MNIST.ipynb))
 - Convolutional Neural Network on CIFAR10 ([notebook](Pytorch/SelfNormalizingNetworks_CNN_CIFAR10.ipynb))
 
