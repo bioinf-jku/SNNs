@@ -23,6 +23,7 @@ as this is identical to lecun initialisation (mode='fan_in') with a gain of 1 (n
 - Convolutional Neural Network on CIFAR10 ([notebook](TF_1_x/SelfNormalizingNetworks_CNN_CIFAR10.ipynb))
 
 ### Tensorflow 2.x (Keras)
+- Multilayer Perceptron on MNIST ([python script](TF_2_x/MNIST-MLP-SELU.py))
 - Convolutional Neural Network on MNIST ([python script](TF_2_x/MNIST-Conv-SELU.py))
 - Convolutional Neural Network on CIFAR10 ([python script](TF_2_x/CIFAR10-Conv-SELU.py))
 
