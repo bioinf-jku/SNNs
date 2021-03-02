@@ -6,7 +6,7 @@ Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested
   users based on the deprecated tf.contrib module (with separate [environment](TF_1_x/environment.yml) file) are also available.
 
 #### Note for Tensorflow >= 1.4 users
-Tensorflow >= 1.4 already has the function "tf.nn.selu" and "tf.contrib.nn.alpha_dropout" that implement the SELU activation function and the suggested dropout version. 
+Tensorflow >= 1.4 already has the function [tf.nn.selu](https://www.tensorflow.org/versions/r1.15/api_docs/python/tf/nn/selu) and [tf.contrib.nn.alpha_dropout](https://www.tensorflow.org/versions/r1.15/api_docs/python/tf/contrib/nn/alpha_dropout) that implement the SELU activation function and the suggested dropout version. 
 #### Note for Tensorflow >= 2.0 users
 Tensorflow 2.3 already has selu activation function when using high level framework keras, [tf.keras.activations.selu](https://www.tensorflow.org/api_docs/python/tf/keras/activations/selu). 
 Must be combined with [tf.keras.initializers.LecunNormal](https://www.tensorflow.org/api_docs/python/tf/keras/initializers/LecunNormal), corresponding dropout version is [tf.keras.layers.AlphaDropout](https://www.tensorflow.org/api_docs/python/tf/keras/layers/AlphaDropout).
