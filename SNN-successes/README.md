@@ -1,7 +1,5 @@
 # Models and architectures built on Self-Normalizing Networks (SELU / SNN)
-A curated list of models (2017–2025) that explicitly use **SELU** and/or the
-**Self-Normalizing Neural Networks** design principles (SELU + AlphaDropout +
-LeCun normal init, avoiding BN where appropriate).
+
 
 ## Foundational papers
 - [Self-Normalizing Neural Networks (NeurIPS 2017)](https://arxiv.org/abs/1706.02515):
@@ -33,20 +31,20 @@ LeCun normal init, avoiding BN where appropriate).
 
 ## Graph Neural Networks (GNNs)
 - [Graph Clustering with Graph Neural Networks (DMoN, JMLR 2023)](https://jmlr.org/papers/volume24/20-998/20-998.pdf):
-  Uses SeLU inside a modified GCN and explicitly replaces ReLU with SeLU for better convergence.
+  Uses SELU inside a modified GCN and explicitly replaces ReLU with SELU for better convergence.
 - [Locally Private Graph Neural Networks (CCS 2021)](https://www.idiap.ch/~gatica/publications/SajadmaneshGatica-ccs21.pdf):
-  Uses SeLU in GCN/GAT/GraphSAGE backbones (two graph conv layers with SeLU + dropout).
+  Uses SELU in GCN/GAT/GraphSAGE backbones (two graph conv layers with SELU + dropout).
 - [Reducing Oversmoothing in Graph Neural Networks by Activation Design (ICLR 2023 submission)](https://openreview.net/pdf?id=8CDeu0f4i2):
-  Compares SeLU-enhanced GCN/GAT variants and discusses depth/oversmoothing behavior.
+  Compares SELU-enhanced GCN/GAT variants and discusses depth/oversmoothing behavior.
 - [Deep Probabilistic Dual Graph Convolution Network (NeurIPS 2023)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/b2b6d0f44e1c1f9f1b3c4b1b4d4d66c0-Abstract-Conference.html):
-  Uses SeLU in its GCN stack.
+  Uses SELU in its GCN stack.
 
 ## Transformers & LLM-adjacent models
 
 - [TMRN-GLU: Transformer-Based Automatic Classification Recognition Network (2022)](https://www.mdpi.com/2079-9292/11/10/1554):
   Chooses SELU where activations are needed, citing stability across SNR conditions.
-- [SeLU-transformer for hoax/news classification (2020–2024 line of work)](https://www.semanticscholar.org/paper/BET%3A-A-Backtranslation-Approach-for-Easy-Data-in-Corbeil-Ghadivel/84d2d7f7fa2f656db458a5c369d0aa35ddb60f5e):
-  Reports strong text classification performance with SeLU-Transformer variants.
+- [SELU-transformer for hoax/news classification (2020–2024 line of work)](https://www.semanticscholar.org/paper/BET%3A-A-Backtranslation-Approach-for-Easy-Data-in-Corbeil-Ghadivel/84d2d7f7fa2f656db458a5c369d0aa35ddb60f5e):
+  Reports strong text classification performance with SELU-Transformer variants.
 - [TabTranSELU: A transformer adaptation for solving tabular data (2024)](https://pdfs.semanticscholar.org/885c/822b8d71d5edadb874dafdcb67f36ce49d11.pdf):
   Replaces a normalization+ReLU pattern with SELU for tabular transformer stability.
 - [BERTSurv (clinical outcomes)](https://cse.cs.ucsb.edu/sites/default/files/publications/bertsurv-bert_based_survival_models_for_predicting_outcomes_for_trauma_patients.pdf):
@@ -54,16 +52,14 @@ LeCun normal init, avoiding BN where appropriate).
 
 ## Time series & Foundation(-style) models
 - [Zero-shot Imputation with Foundation Inference Models for Dynamical Systems (ICLR 2025)](https://arxiv.org/abs/2402.07594):
-  Uses SeLU as activation for all feed-forward networks in FIM/FIM-ℓ modules.
+  Uses SELU as activation for all feed-forward networks in FIM/FIM-ℓ modules.
 - [Foundation Inference Models for Stochastic Differential Equations (2025)](https://arxiv.org/abs/2502.19049):
-  Follow-up foundation-style work in the same line (check architecture details for continued SeLU use).
+  Follow-up foundation-style work in the same line (check architecture details for continued SELU use).
 - [Towards Foundation Inference Models that Learn ODEs In-Context (2025)](https://arxiv.org/abs/2510.12650):
   Extends the FIM line toward in-context ODE learning.
 
 ## Generative Models
 ### Autoencoders & VAEs
-- [Self-Normalizing Neural Networks (NeurIPS 2017)](https://arxiv.org/abs/1706.02515):
-  Foundational theory that motivates deep encoder/decoder stacks with SELU.
 - [Training Deep AutoEncoders for Collaborative Filtering (2017/2018)](https://arxiv.org/abs/1708.01715):
   Practical deep AE results with SELU among competitive activations.
 - [Application of generative autoencoder in de novo molecular design (2017)](https://arxiv.org/abs/1711.07839):
@@ -82,7 +78,7 @@ LeCun normal init, avoiding BN where appropriate).
   Uses SELU as activation across datasets in a CNF-based survival modeling setting.
 
 ### Diffusion & Score-based models
-- [SE(3)-Equivariant Diffusion Graph Nets (workshop 2024)](https://openreview.net/pdf/37fd86fe050a82aa6d9d9a308685520622b3fcc4.pdf):
+- [SE(3)-Equivariant Diffusion Graph Nets](https://openreview.net/pdf/37fd86fe050a82aa6d9d9a308685520622b3fcc4.pdf):
   Uses SELU activations in MLPs inside the diffusion-graph pipeline for fluid flow fields.
 - [Radar emitter denoising with DDPM variants (2024)](https://www.mdpi.com/2072-4292/16/17/3215):
   Employs SELU in 1D conv blocks within a DDPM-style architecture.
@@ -91,7 +87,7 @@ LeCun normal init, avoiding BN where appropriate).
 
 ### Flow Matching / Schrödinger Bridges
 - [Simulation-Free Schrödinger Bridges via Score and Flow Matching (AISTATS 2024)](https://proceedings.mlr.press/v238/tong24a/tong24a.pdf):
-  Uses 3-layer MLPs with SeLU activations in vector-field/score networks.
+  Uses 3-layer MLPs with SELU activations in vector-field/score networks.
 - [Meta Flow Matching (ICLR 2025)](https://proceedings.iclr.cc/paper_files/paper/2025/file/ebdb990471f653dffb425eff03c7c980-Paper-Conference.pdf):
   Uses multi-layer MLPs with SELU activations for synthetic and biological experiments.
 - [Source-Guided Flow Matching (2025)](https://arxiv.org/abs/2508.14807):
