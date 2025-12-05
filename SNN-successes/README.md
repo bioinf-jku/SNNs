@@ -51,9 +51,7 @@
   Deep FNN with SELUs performed best in their comparisons.
 - [Training Deep AutoEncoders for Collaborative Filtering (2017/2018)](https://arxiv.org/abs/1708.01715):
   Observes deep autoencoders benefit from activation choices including SELU.
-- [Training deep autoencoders for collaborative filtering (GTC 2018 talk)](https://on-demand.gputechconf.com/gtc/2018/presentation/s8212-training-deep-autoencoders-for-collaborative-filtering.pdf):
-  Practical large-scale recommender success with deep AEs, highlighting SELU-family
-  activations enabling depth.
+
 
 ## Transformers & LLM-adjacent models
 - [TMRN-GLU: Transformer-Based Automatic Classification Recognition Network (2022)](https://www.mdpi.com/2079-9292/11/10/1554):
