@@ -19,7 +19,7 @@
   Uses MLP blocks with SELU in a diffusion+GAN hybrid for fast sampling.
 
 ### Flow Matching / Schrödinger Bridges
-- [Improving and generalizing flow-based generative models with minibatch optimal transport](https://arxiv.org/abs/2302.00482)
+- [Improving and generalizing flow-based generative models with minibatch optimal transport](https://arxiv.org/abs/2302.00482) Schrödinger bridge model is a self-normalizing MLP with SELU.
 - [Simulation-Free Schrödinger Bridges via Score and Flow Matching (AISTATS 2024)](https://proceedings.mlr.press/v238/tong24a/tong24a.pdf):
   Uses 3-layer MLPs with SELU activations in vector-field/score networks.
 - [Meta Flow Matching (ICLR 2025)](https://proceedings.iclr.cc/paper_files/paper/2025/file/ebdb990471f653dffb425eff03c7c980-Paper-Conference.pdf):
