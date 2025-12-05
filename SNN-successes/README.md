@@ -5,7 +5,7 @@
 - [Self-Normalizing Neural Networks (NeurIPS 2017)](https://arxiv.org/abs/1706.02515):
   Introduces SELU, AlphaDropout, and the self-normalizing theory enabling deep FNNs
   without explicit normalization.
-- [Bidirectionally self-normalizing neural networks. Neural Networks, 167, 283-291.(https://www.sciencedirect.com/science/article/abs/pii/S0893608023004367)
+- [Bidirectionally self-normalizing neural networks. Neural Networks, 167, 283-291](https://www.sciencedirect.com/science/article/abs/pii/S0893608023004367)
   Extends SNNs to both forward and backward pass by introducing shift parameters in activation function
 
 ## Generative Models
