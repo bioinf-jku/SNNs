@@ -27,6 +27,12 @@
 - [Source-Guided Flow Matching (2025)](https://arxiv.org/abs/2508.14807):
   Uses SELU-MLP vector fields with smoothing priors.
 
+### Normalizing Flows
+- [Contextual Movement Models Based on Normalizing Flows (2021)](https://ieeexplore.ieee.org/document/9441650):
+  Uses SELU in MLP components for movement modeling.
+- [Individual Survival Curves with Conditional Normalizing Flows (2021)](https://arxiv.org/abs/2107.12825):
+  Uses SELU as activation across datasets in a CNF-based survival modeling setting.
+
 ### Autoencoders & VAEs
 - [Training Deep AutoEncoders for Collaborative Filtering (2017/2018)](https://arxiv.org/abs/1708.01715):
   Practical deep AE results with SELU among competitive activations.
@@ -39,11 +45,6 @@
 - [THINKING LIKE A MACHINE - Generating Visual Rationales with Wasserstein GANs (2017)](https://pdfs.semanticscholar.org/dd4c/23a21b1199f34e5003e26d2171d02ba12d45.pdf):
   Uses SELU-style setups to reduce reliance on batch normalization.
 
-### Normalizing Flows
-- [Contextual Movement Models Based on Normalizing Flows (2021)](https://ieeexplore.ieee.org/document/9441650):
-  Uses SELU in MLP components for movement modeling.
-- [Individual Survival Curves with Conditional Normalizing Flows (2021)](https://arxiv.org/abs/2107.12825):
-  Uses SELU as activation across datasets in a CNF-based survival modeling setting.
 
 ## MLPs / Tabular / Scientific MLPs
 - [Improving Palliative Care with Deep Learning (2017)](https://arxiv.org/abs/1711.06402):
