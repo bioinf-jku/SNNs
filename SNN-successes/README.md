@@ -17,6 +17,9 @@
   Employs SELU in 1D conv blocks within a DDPM-style architecture.
 - [DIDiffGes: Decoupled Semi-Implicit Diffusion Models for Gesture Generation (2025)](https://arxiv.org/abs/2503.17059):
   Uses MLP blocks with SELU in a diffusion+GAN hybrid for fast sampling.
+- [Learning of Population Dynamics: Inverse Optimization Meets JKO Scheme (2025)](https://arxiv.org/html/2506.01502v1):  
+  Their OT-map MLP concatenates time and **uses selu activations**.
+
 
 ### Flow Matching / Schrödinger Bridges
 - [Improving and generalizing flow-based generative models with minibatch optimal transport](https://arxiv.org/abs/2302.00482) Schrödinger bridge model is a self-normalizing MLP with SELU.
@@ -26,6 +29,25 @@
   Uses multi-layer MLPs with SELU activations for synthetic and biological experiments.
 - [Source-Guided Flow Matching (2025)](https://arxiv.org/abs/2508.14807):
   Uses SELU-MLP vector fields with smoothing priors.
+- [Explicit Flow Matching: On the theory of ... (2024)](https://openreview.net/pdf/fea78f8c3ee7a53805dea330c18827a6d754ad33.pdf):  
+  Evaluation uses a **3-layer MLP with SeLU activations** and hidden dim 64.
+- [Flows Don’t Cross in High Dimension (2025)](https://openreview.net/pdf?id=nK9TmlJu8F):  
+  Neural vector-field experiments use a **3-layer MLP, hidden dim 64, with SELU**.
+- [OAT-FM: Optimal Acceleration Transport for Improved Flow Matching (2025)](https://arxiv.org/html/2509.24936v1):  
+  Low-dimensional OT/CFM benchmarks parameterize the vector field with a **3-hidden-layer MLP (width 64) + SELU**.
+- [ParetoFlow: Guided Flows in Multi-Objective Optimization (2024)](https://arxiv.org/html/2412.03718v1):  
+  Uses a **multi-layer MLP with SeLU activations** following flow-matching training protocols.
+- [TorchCFM library](https://github.com/atong01/conditional-flow-matching):  
+  Example configs reference **3×64 MLPs with SeLU** in action/CFM demos.
+
+### Multi-marginal / irregular-time dynamics
+- [Multi-Marginal Stochastic Flow Matching for High-Dimensional Snapshot Data at Irregular Time Points (ICML 2025)](https://arxiv.org/html/2508.04351v1):  
+  Training setup uses **MLPs with two hidden layers of width 64 and SELU activations** for most non-image experiments.
+- [Multi-Marginal Flow Matching with Adversarially Learnt Interpolants (2025)](https://arxiv.org/html/2510.01159v1):  
+  **CFM nets** in the cell-tracking experiment are **3-hidden-layer MLPs with 256 units per layer and SELU**; also notes **3-layer SELU MLPs** used for vector fields in single-cell setups.
+- [Dynamic Conditional Optimal Transport through Simulation-Free Flows (2024)](https://www.proceedings.com/content/079/079017-2968open.pdf):  
+  For FM and their COT-FM variant, the model architecture is an **MLP with SeLU activations**.
+
 
 ### Normalizing Flows
 - [Contextual Movement Models Based on Normalizing Flows (2021)](https://ieeexplore.ieee.org/document/9441650):
