@@ -131,5 +131,7 @@
 - [Intelligent Energy Pairing Scheduler (InEPS) for Heterogeneous HPC Clusters (2025)](https://link.springer.com/article/10.1007/s11227-024-06907-y):  
   Uses **SELU** between actor/critic layers in a PPO-style scheduling system.
 - [Quantum compiling by deep reinforcement learning (2021)](https://arxiv.org/abs/2105.15048):  
-  Cross-domain RL application that may use **SELU** in parts of the network 
+  Cross-domain RL application that may use **SELU** in parts of the network
+- [Pearl: Automatic Code Optimization Using Deep Reinforcement Learning (2025)](https://arxiv.org/abs/2506.01880): Uses **PPO** with a GNN backbone and **SELU** in the MLP before the policy/value heads.
+
 
