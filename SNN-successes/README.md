@@ -117,8 +117,19 @@
 - [Sentiment extraction from Consumer-generated noisy short texts (2017)](http://sentic.net/sentire2017meisheri.pdf):
   Uses SELU in feed-forward components.
 
-## Reinforcement Learning
-- [Automated Cloud Provisioning on AWS using Deep Reinforcement Learning (2017)](https://arxiv.org/abs/1709.04305):
-  Deep CNN with SELUs in RL settings.
-- [Learning to Run with Actor-Critic Ensemble (2017)](https://arxiv.org/abs/1712.08987):
-  Reports SELU among top-performing activation choices.
+## Reinforcement Learning: improved stability of RL systems
+- [Automated Cloud Provisioning on AWS using Deep Reinforcement Learning (2017)](https://arxiv.org/abs/1709.04305):  
+  Deep CNN + DQN-style setup using **SELU** in the network architecture.
+- [Learning to Run with Actor-Critic Ensemble (2017)](https://arxiv.org/abs/1712.08987):  
+  Reports testing multiple activations and finding **SELU** superior; uses **SELU** in actor/critic FC layers.
+- [Multi-Agent Trust Region Policy Optimization (MATRPO) (2020)](https://arxiv.org/abs/2010.07916):  
+  Policies/critics use **two hidden layers of 128 SeLU units** in their experiments.
+- [Application of Deep Q-Network in Portfolio Management (2020)](https://arxiv.org/abs/2003.06365):  
+  Uses **SELU** in conv layers (argues negative-valued signals matter for this input type).
+- [Latent-Conditioned Policy Gradient for Multi-Objective RL (2023)](https://arxiv.org/abs/2303.08909):  
+  Uses **SELU** for most non-output activations in policy/value networks.
+- [Intelligent Energy Pairing Scheduler (InEPS) for Heterogeneous HPC Clusters (2025)](https://link.springer.com/article/10.1007/s11227-024-06907-y):  
+  Uses **SELU** between actor/critic layers in a PPO-style scheduling system.
+- [Quantum compiling by deep reinforcement learning (2021)](https://arxiv.org/abs/2105.15048):  
+  Cross-domain RL application that may use **SELU** in parts of the network 
+
