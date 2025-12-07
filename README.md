@@ -5,10 +5,10 @@ It has been a wild year in AI and especially for self-normalizing networks and S
 
 - Normalization-Free Transformers (LeCun et al.) rediscovering controlled signal propagation.
 - SELU as the default in Conditional Flow Matching (CFM, SB, MMFM) — the 3×64 baseline phenomenon.
-- SELU in Time-Series Foundation Models (FIM/FIM-ℓ, SDE-FIM, Flowstate).
-- SELU-Transformer resurgence in specialized NLP and tabular domains.
-- RL systems using SELU for stability in PPO / MARL, e.g. for code optimization.
-- Graph Convolutional Networks (GCN) use SELU activations since [DMoN](https://arxiv.org/abs/2006.16904). In 2025, methods like [GyralNet](https://arxiv.org/abs/2503.19823), still have this design 
+- SELU in Time-Series Foundation Models ([FIM/FIM-ℓ](https://openreview.net/forum?id=NPSZ7V1CCY), [Flowstate](https://arxiv.org/abs/2508.05287)).
+- [SELU-transformer](https://ieeexplore.ieee.org/abstract/document/10957007?casa_token=TgFEKMg4iUkAAAAA:utZNYo98h6-_FVKzJwdPlLUEiK-reLFE802g8X1IuRuAbDkl0JEB8-2hTNC6ZisxVpWYWQ7HP1zt) resurgence in specialized NLP and tabular domains, as [TabTranSELU](https://doi.org/10.54254/2755-2721/51/20241174).
+- RL systems using SELU for stability in [PPO](https://arxiv.org/abs/2506.01880) / MARL, e.g. for code optimization.
+- Graph Convolutional Networks (GCN) use SELU activations since [DMoN](https://arxiv.org/abs/2006.16904). In 2025, methods like [GyralNet](https://arxiv.org/abs/2503.19823), use design as standard.
 - AI systems in drug discovery still dominated by SNNs -- AI is hitting a wall in drug discovery
 
 
