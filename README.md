@@ -8,6 +8,7 @@ It has been a wild year in AI and especially for self-normalizing networks and S
 - SELU in Time-Series Foundation Models (FIM/FIM-ℓ, SDE-FIM, Flowstate).
 - SELU-Transformer resurgence in specialized NLP and tabular domains.
 - RL systems using SELU for stability in PPO / MARL, e.g. for code optimization.
+- AI systems in drug discovery still dominated by SNNs -- AI is hitting a wall in drug discovery
 
 
 - In March 2025, I saw ["Transformers without normalization"](https://arxiv.org/abs/2503.10622) by Yann LeCun and colleagues drop on arxiv. I thought "now they finanly have it", because Yann has been thinking in similar directions as I did already back in his "Efficient Backprop" tutorial. After all, self-normalizing networks require the initialization named after him ("LeCun's initialization"). Strangely it's just a scaled tanh-activation that does the job.. ok!
