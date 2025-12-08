@@ -16,7 +16,7 @@ It has been a wild year in AI and especially for self-normalizing networks and S
 
 
 ### Normalization-free Transformers. Will we get LLMs without normalization layers?
-In March 2025, I saw ["Transformers without normalization"](https://arxiv.org/abs/2503.10622) by Yann LeCun and colleagues drop on arxiv. I thought "now they finanly have it", because Yann has been thinking in similar directions as I did already back in his "Efficient Backprop" tutorial. After all, self-normalizing networks require the initialization named after him ("LeCun's initialization"). Strangely it's just a scaled tanh-activation that does the job.. ok!
+In March 2025, I saw ["Transformers without normalization"](https://arxiv.org/abs/2503.10622) by Yann LeCun and colleagues drop on arxiv. I thought "now they finally have it", because Yann has been thinking in similar directions as I did already back in his "Efficient Backprop" tutorial. After all, self-normalizing networks require the initialization named after him ("LeCun's initialization"). Strangely it's just a scaled tanh-activation that does the job.. ok!
 
 ### The 3x64 baseline phenomenon in conditional flow matching and Schrödinger bridges
 Then we got all this nice work on **conditional flow matching**: here 2 or 3 layer SELU-networks with a width of 64 have quasi become standard since Alex Tong's work and [implementation in torch CMF](https://github.com/atong01/conditional-flow-matching/blob/main/torchcfm/models/models.py). Here the SELU-network represents the derivative of another function -- this is where the smoothness of SELU networks, i.e. smooth derivative of the other function, is clearly the improvement over ReLU networks.
