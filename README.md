@@ -39,7 +39,7 @@ We've re-evaluated machine-learning and deep learning methods from the last 25 y
 
 ## Foundational papers
 - [Self-Normalizing Neural Networks (NeurIPS 2017)](https://arxiv.org/abs/1706.02515):
-  Introduces SELU, AlphaDropout, and the self-normalizing theory enabling deep FNNs
+  Introduces SELU, AlphaDropout, and the self-normalizing theory enabling deep multi-layer perceptrons (MLPs)
   without explicit normalization.
 - [Bidirectionally self-normalizing neural networks. Neural Networks, 167, 283-291](https://www.sciencedirect.com/science/article/abs/pii/S0893608023004367)
   Extends SNNs to both forward and backward pass by introducing shift parameters in activation function
