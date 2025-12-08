@@ -134,8 +134,7 @@ We've re-evaluated machine-learning and deep learning methods from the last 25 y
 ## Time series & Foundation(-style) models
 - [Zero-shot Imputation with Foundation Inference Models for Dynamical Systems (ICLR 2025)](https://arxiv.org/abs/2402.07594):
   Uses SELU as activation for all feed-forward networks in FIM/FIM-ℓ modules.
-- [Towards Foundation Inference Models that Learn ODEs In-Context (2025)](https://arxiv.org/abs/2510.12650):
-  Extends the FIM line toward in-context ODE learning.
+- [FlowState: Sampling Rate Invariant Time Series Forecasting](https://arxiv.org/abs/2508.05287): main layer uses SELU.
 
 ## Convolutional Neural Networks
 - [Solving internal covariate shift in deep learning with linked neurons (2017)](https://arxiv.org/abs/1712.02609):
