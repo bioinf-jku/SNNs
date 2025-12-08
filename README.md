@@ -1,3 +1,6 @@
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+
 # The Great Comeback of Self-Normalizing Networks in 2025
 ## *Günter Klambauer*
 
