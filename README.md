@@ -22,7 +22,7 @@ In March 2025, I saw ["Transformers without normalization"](https://arxiv.org/ab
 Then we got all this nice work on **conditional flow matching**: here 2 or 3 layer SELU-networks with a width of 64 have quasi become standard since Alex Tong's work and [implementation in torch CMF](https://github.com/atong01/conditional-flow-matching/blob/main/torchcfm/models/models.py). Here the SELU-network represents the derivative of another function -- this is where the smoothness of SELU networks, i.e. smooth derivative of the other function, is clearly the improvement over ReLU networks.
 
 ### Time-series foundation models rely on SELU
-2025 was clearly the year of **time-series foundation models** and I am very happy that we had a part in this. Clearly our [TiRex](https://arxiv.org/abs/2505.23719) taking the lead in the [GIFT Eval leaderboard](https://huggingface.co/spaces/Salesforce/GIFT-Eval) (ahead of Amazon's Chronos) was one of my favourite moments in 2025. However, the other foundation models, like FIM/FIM-ℓ, SDE-FIM, [Flowstate](https://arxiv.org/abs/2508.05287), they all use SELU activations.
+2025 was clearly the year of **time-series foundation models** and I am very happy that we had a part in this. Clearly our [TiRex](https://arxiv.org/abs/2505.23719) taking the lead in the [GIFT Eval leaderboard](https://huggingface.co/spaces/Salesforce/GIFT-Eval) (ahead of Amazon's Chronos) was one of my favourite moments in 2025. However, the other foundation models, like FIM/FIM-ℓ and [Flowstate](https://arxiv.org/abs/2508.05287), they all use SELU activations.
 
 ### RL systems use SELU for stability
 One of the quiet but undeniable trends of 2025 is the **return of SELU in reinforcement learning**.
