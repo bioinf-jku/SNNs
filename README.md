@@ -54,7 +54,7 @@ We've re-evaluated machine-learning and deep learning methods from the last 25 y
 - [DIDiffGes: Decoupled Semi-Implicit Diffusion Models for Gesture Generation (2025)](https://arxiv.org/abs/2503.17059):
   Uses MLP blocks with SELU in a diffusion+GAN hybrid for fast sampling.
 - [Learning of Population Dynamics: Inverse Optimization Meets JKO Scheme (2025)](https://arxiv.org/html/2506.01502v1):  
-  Their OT-map MLP concatenates time and **uses selu activations**.
+  Their OT-map MLP concatenates time and uses SELU activations.
 
 
 ### Flow Matching / Schrödinger Bridges
@@ -66,23 +66,23 @@ We've re-evaluated machine-learning and deep learning methods from the last 25 y
 - [Source-Guided Flow Matching (2025)](https://arxiv.org/abs/2508.14807):
   Uses SELU-MLP vector fields with smoothing priors.
 - [Explicit Flow Matching: On the theory of ... (2024)](https://openreview.net/pdf/fea78f8c3ee7a53805dea330c18827a6d754ad33.pdf):  
-  Evaluation uses a **3-layer MLP with SeLU activations** and hidden dim 64.
+  Evaluation uses a 3-layer MLP with SeLU activations and hidden dim 64.
 - [Flows Don’t Cross in High Dimension (2025)](https://openreview.net/pdf?id=nK9TmlJu8F):  
-  Neural vector-field experiments use a **3-layer MLP, hidden dim 64, with SELU**.
+  Neural vector-field experiments use a 3-layer MLP, hidden dim 64, with SELU.
 - [OAT-FM: Optimal Acceleration Transport for Improved Flow Matching (2025)](https://arxiv.org/html/2509.24936v1):  
-  Low-dimensional OT/CFM benchmarks parameterize the vector field with a **3-hidden-layer MLP (width 64) + SELU**.
+  Low-dimensional OT/CFM benchmarks parameterize the vector field with a 3-hidden-layer MLP (width 64) + SELU.
 - [ParetoFlow: Guided Flows in Multi-Objective Optimization (2024)](https://arxiv.org/html/2412.03718v1):  
-  Uses a **multi-layer MLP with SeLU activations** following flow-matching training protocols.
+  Uses a multi-layer MLP with SeLU activations following flow-matching training protocols.
 - [TorchCFM library](https://github.com/atong01/conditional-flow-matching):  
-  Example configs reference **3×64 MLPs with SeLU** in action/CFM demos.
+  Example configs reference 3×64 MLPs with SeLU** in action/CFM demos.
 
 ### Multi-marginal / irregular-time dynamics
 - [Multi-Marginal Stochastic Flow Matching for High-Dimensional Snapshot Data at Irregular Time Points (ICML 2025)](https://arxiv.org/html/2508.04351v1):  
   Training setup uses **MLPs with two hidden layers of width 64 and SELU activations** for most non-image experiments.
 - [Multi-Marginal Flow Matching with Adversarially Learnt Interpolants (2025)](https://arxiv.org/html/2510.01159v1):  
-  **CFM nets** in the cell-tracking experiment are **3-hidden-layer MLPs with 256 units per layer and SELU**; also notes **3-layer SELU MLPs** used for vector fields in single-cell setups.
+  **CFM nets** in the cell-tracking experiment are 3-hidden-layer MLPs with 256 units per layer and SELU; also notes 3-layer SELU MLPs used for vector fields in single-cell setups.
 - [Dynamic Conditional Optimal Transport through Simulation-Free Flows (2024)](https://www.proceedings.com/content/079/079017-2968open.pdf):  
-  For FM and their COT-FM variant, the model architecture is an **MLP with SeLU activations**.
+  For FM and their COT-FM variant, the model architecture is an MLP with SeLU activations.
 
 
 ### Normalizing Flows
@@ -154,29 +154,27 @@ We've re-evaluated machine-learning and deep learning methods from the last 25 y
   Uses SELU in feed-forward components.
 
 ## Reinforcement Learning: improved stability of RL systems
-- [Automated Cloud Provisioning on AWS using Deep Reinforcement Learning (2017)](https://arxiv.org/abs/1709.04305):  
-  Deep CNN + DQN-style setup using **SELU** in the network architecture.
-- [Learning to Run with Actor-Critic Ensemble (2017)](https://arxiv.org/abs/1712.08987):  
-  Reports testing multiple activations and finding **SELU** superior; uses **SELU** in actor/critic FC layers.
-- [Multi-Agent Trust Region Policy Optimization (MATRPO) (2020)](https://arxiv.org/abs/2010.07916):  
-  Policies/critics use **two hidden layers of 128 SeLU units** in their experiments.
-- [Application of Deep Q-Network in Portfolio Management (2020)](https://arxiv.org/abs/2003.06365):  
-  Uses **SELU** in conv layers (argues negative-valued signals matter for this input type).
-- [Latent-Conditioned Policy Gradient for Multi-Objective RL (2023)](https://arxiv.org/abs/2303.08909):  
-  Uses **SELU** for most non-output activations in policy/value networks.
-- [Intelligent Energy Pairing Scheduler (InEPS) for Heterogeneous HPC Clusters (2025)](https://link.springer.com/article/10.1007/s11227-024-06907-y):  
-  Uses **SELU** between actor/critic layers in a PPO-style scheduling system.
-- [Quantum compiling by deep reinforcement learning (2021)](https://arxiv.org/abs/2105.15048):  
-  Cross-domain RL application that may use **SELU** in parts of the network
-- [Pearl: Automatic Code Optimization Using Deep Reinforcement Learning (2025)](https://arxiv.org/abs/2506.01880): Uses **PPO** with a GNN backbone and **SELU** in the MLP before the policy/value heads.
+- [Automated Cloud Provisioning on AWS using Deep Reinforcement Learning (2017)](https://arxiv.org/abs/1709.04305):
+  Deep CNN + DQN-style setup using SELU in the network architecture.
+- [Learning to Run with Actor-Critic Ensemble (2017)](https://arxiv.org/abs/1712.08987):
+  Reports testing multiple activations and finding SELU superior; uses SELU in actor/critic FC layers.
+- [Multi-Agent Trust Region Policy Optimization (MATRPO) (2020)](https://arxiv.org/abs/2010.07916): 
+  Policies/critics use two hidden layers of 128 SeLU units in their experiments.
+- [Application of Deep Q-Network in Portfolio Management (2020)](https://arxiv.org/abs/2003.06365):
+  Uses SELU in conv layers (argues negative-valued signals matter for this input type).
+- [Latent-Conditioned Policy Gradient for Multi-Objective RL (2023)](https://arxiv.org/abs/2303.08909):
+  Uses SELU for most non-output activations in policy/value networks.
+- [Intelligent Energy Pairing Scheduler (InEPS) for Heterogeneous HPC Clusters (2025)](https://link.springer.com/article/10.1007/s11227-024-06907-y):
+  Uses SELU between actor/critic layers in a PPO-style scheduling system.
+- [Quantum compiling by deep reinforcement learning (2021)](https://arxiv.org/abs/2105.15048):
+  Cross-domain RL application that may use SELU in parts of the network
+- [Pearl: Automatic Code Optimization Using Deep Reinforcement Learning (2025)](https://arxiv.org/abs/2506.01880):
+  Uses PPO with a GNN backbone and SELU in the MLP before the policy/value heads.
 
 
 
 
-
-
-
-## Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested by Klambauer et al. ([arXiv pre-print](https://arxiv.org/pdf/1706.02515.pdf)). 
+# Tutorials and implementations for "Self-normalizing networks"(SNNs) as suggested by Klambauer et al. ([arXiv pre-print](https://arxiv.org/pdf/1706.02515.pdf)). 
 
 ## Versions
 - see [environment](environment.yml) file for full list of prerequisites. Tutorial implementations use Tensorflow > 2.0 (Keras) or Pytorch, but versions for Tensorflow 1.x 
