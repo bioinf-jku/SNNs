@@ -39,7 +39,7 @@ $$
 H^{(l+1)} = \mathrm{SELU} \left( \tilde{A} H^{(l)} W^{(l)}  + H^{(l)} W_{\text{skip}}^{(l)} \right)
 $$
 
-where $\tilde{A}$ is the normalized adjacency matrix. Classic [GCN](https://arxiv.org/abs/1609.02907) used $H^{(l+1)} = \sigma \left( \tilde{A}  H^{(l)} W^{(l)} \right)$ with sigmoid or ReLU activation. While the full SNN theory doesn’t directly apply to message-passing, a shallow GNN layer is still “linear aggregation + nonlinearity,” and SELU’s self-normalizing behavior seems to provide more stable training in normalization-free, noisy, or shallow GNN settings. 
+where \(\tilde{A}\) is the normalized adjacency matrix. Classic [GCN](https://arxiv.org/abs/1609.02907) used \(H^{(l+1)} = \sigma \left( \tilde{A}  H^{(l)} W^{(l)} \right)\) with sigmoid or ReLU activation. While the full SNN theory doesn’t directly apply to message-passing, a shallow GNN layer is still “linear aggregation + nonlinearity,” and SELU’s self-normalizing behavior seems to provide more stable training in normalization-free, noisy, or shallow GNN settings. 
 
 
 ### AI is hitting a wall in drug discovery, a wall built of SELUs
