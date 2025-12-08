@@ -29,7 +29,7 @@ This year, the evidence became impossible to ignore: In **PPO-based code optimiz
 
 
 ### Graph convolutional networks consistently replace ReLU with SELU for better convergence and robustness
-A growing line of **graph clustering** ([DMoN](https://arxiv.org/abs/2006.16904), [DGCLUSTER](https://arxiv.org/abs/2312.12697), [MetaGC](https://doi.org/10.1145/3583780.3615038), [Potts-GNN](https://arxiv.org/abs/2308.09644)) and **privacy-preserving GNN** work (LPGNN, GAP, UPGNET) consistently replaces ReLU with SELU and reports better convergence or robustness. 
+A growing line of **graph clustering** ([DMoN](https://arxiv.org/abs/2006.16904), [DGCLUSTER](https://arxiv.org/abs/2312.12697), [MetaGC](https://doi.org/10.1145/3583780.3615038), [Potts-GNN](https://arxiv.org/abs/2308.09644)) and **privacy-preserving GNN** work ([LPGNN](https://arxiv.org/abs/2006.05535), GAP, UPGNET) consistently replaces ReLU with SELU and reports better convergence or robustness. 
 Since [DMoN](https://arxiv.org/abs/2006.16904), GCN use the following forward propagation:
 
 $$
@@ -37,10 +37,6 @@ H^{(l+1)} = \mathrm{SELU} \left( \tilde{A} H^{(l)} W^{(l)}  + H^{(l)} W_{\text{s
 $$
 
 where $\tilde{A}$ is the normalized adjacency matrix. Classic [GCN](https://arxiv.org/abs/1609.02907) used $H^{(l+1)} = \sigma \left( \tilde{A}  H^{(l)} W^{(l)} \right)$ with sigmoid or ReLU activation. While the full SNN theory doesn’t directly apply to message-passing, a shallow GNN layer is still “linear aggregation + nonlinearity,” and SELU’s self-normalizing behavior seems to provide more stable training in normalization-free, noisy, or shallow GNN settings. 
-
-
-
-
 
 
 ### AI is hitting a wall in drug discovery, a wall built of SELUs
