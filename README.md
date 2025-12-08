@@ -77,11 +77,11 @@ We've re-evaluated machine-learning and deep learning methods from the last 25 y
   Example configs reference 3×64 MLPs with SeLU** in action/CFM demos.
 
 ### Multi-marginal / irregular-time dynamics
-- [Multi-Marginal Stochastic Flow Matching for High-Dimensional Snapshot Data at Irregular Time Points (ICML 2025)](https://arxiv.org/html/2508.04351v1):  
+- [Multi-Marginal Stochastic Flow Matching for High-Dimensional Snapshot Data at Irregular Time Points (ICML 2025)](https://arxiv.org/html/2508.04351v1):
   Training setup uses **MLPs with two hidden layers of width 64 and SELU activations** for most non-image experiments.
-- [Multi-Marginal Flow Matching with Adversarially Learnt Interpolants (2025)](https://arxiv.org/html/2510.01159v1):  
+- [Multi-Marginal Flow Matching with Adversarially Learnt Interpolants (2025)](https://arxiv.org/html/2510.01159v1):
   **CFM nets** in the cell-tracking experiment are 3-hidden-layer MLPs with 256 units per layer and SELU; also notes 3-layer SELU MLPs used for vector fields in single-cell setups.
-- [Dynamic Conditional Optimal Transport through Simulation-Free Flows (2024)](https://www.proceedings.com/content/079/079017-2968open.pdf):  
+- [Dynamic Conditional Optimal Transport through Simulation-Free Flows (2024)](https://www.proceedings.com/content/079/079017-2968open.pdf):
   For FM and their COT-FM variant, the model architecture is an MLP with SeLU activations.
 
 
