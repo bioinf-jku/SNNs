@@ -1,15 +1,15 @@
 # The Great Comeback of Self-Normalizing Networks in 2025
 ## *Günter Klambauer*
 
-It has been a wild year in AI and especially for self-normalizing networks and SELU activations.
+It has been a wild year in AI and especially for self-normalizing networks and SELU activations!
 
-- [Normalization-Free Transformers](https://arxiv.org/abs/2503.10622) rediscovering controlled signal propagation.
-- SELU as the default in [Conditional Flow Matching works](https://arxiv.org/abs/2302.00482) — the 3×64 baseline phenomenon.
-- SELU in Time-Series Foundation Models ([FIM/FIM-ℓ](https://openreview.net/forum?id=NPSZ7V1CCY), [Flowstate](https://arxiv.org/abs/2508.05287)).
-- [SELU-transformer](https://ieeexplore.ieee.org/abstract/document/10957007?casa_token=TgFEKMg4iUkAAAAA:utZNYo98h6-_FVKzJwdPlLUEiK-reLFE802g8X1IuRuAbDkl0JEB8-2hTNC6ZisxVpWYWQ7HP1zt) resurgence in specialized NLP and tabular domains, as [TabTranSELU](https://doi.org/10.54254/2755-2721/51/20241174).
-- RL systems using SELU for stability in [PPO](https://arxiv.org/abs/2506.01880), e.g. for code optimization.
-- Graph Convolutional Networks (GCN) use SELU activations since [DMoN](https://arxiv.org/abs/2006.16904). In 2025, methods like [GyralNet](https://arxiv.org/abs/2503.19823), use design as standard.
-- [AI systems in drug discovery still dominated by SNNs](https://arxiv.org/abs/2511.14744) -- AI is hitting a wall in drug discovery
+- [Normalization-Free Transformers](https://arxiv.org/abs/2503.10622) have re-discovered controlled signal propagation.
+- SELU is the default in [Conditional Flow Matching works](https://arxiv.org/abs/2302.00482) -- **the 3×64 baseline phenomenon**.
+- Time-Series Foundation Models adopt SELU in their architectures ([FIM/FIM-ℓ](https://openreview.net/forum?id=NPSZ7V1CCY), [Flowstate](https://arxiv.org/abs/2508.05287)).
+- The [SELU-transformer](https://ieeexplore.ieee.org/abstract/document/10957007?casa_token=TgFEKMg4iUkAAAAA:utZNYo98h6-_FVKzJwdPlLUEiK-reLFE802g8X1IuRuAbDkl0JEB8-2hTNC6ZisxVpWYWQ7HP1zt) made a **resurgence** in specialized NLP and tabular domains, as [TabTranSELU](https://doi.org/10.54254/2755-2721/51/20241174) **kicking out that darn SwiGLU module.
+- RL systems are using SELU for stability in [PPO](https://arxiv.org/abs/2506.01880), e.g. for code optimization.
+- Graph Convolutional Networks (GCN) have been using SELU activations since [DMoN](https://arxiv.org/abs/2006.16904). In 2025, methods like [GyralNet](https://arxiv.org/abs/2503.19823), use the design as standard.
+- [AI systems in drug discovery still dominated by SNNs](https://arxiv.org/abs/2511.14744) -- AI is hitting a wall in drug discovery: No progress at toxicity/activity prediction for molecules; **self-normalizing networks** still in the [lead](https://huggingface.co/spaces/ml-jku/tox21_leaderboard) aka leaderboard :)
 
 
 ### Normalization-free Transformers. Will we get LLMs without normalization layers?
@@ -22,9 +22,17 @@ Then we got all this nice work on **conditional flow matching**: here 2 or 3 lay
 2025 was clearly the year of **time-series foundation models** and I am very happy that we had a part in this. Clearly our [TiRex](https://arxiv.org/abs/2505.23719) taking the lead in the [GIFT Eval] leaderboard](https://huggingface.co/spaces/Salesforce/GIFT-Eval) (ahead of Amazon's Chronos) was one of my favourite moments in 2025. However, the other foundation models, like FIM/FIM-ℓ, SDE-FIM, [Flowstate](https://arxiv.org/abs/2508.05287), they all use SELU activations.
 
 ### RL systems use SELU for stability
+One of the quiet but undeniable trends of 2025 is the **return of SELU in reinforcement learning**.
+Across several independent lines of work, researchers rediscovered what we already saw in 2017 during the **Learning-to-Run** challenge: 7
+actor–critic methods become meaningfully **more stable** when the policy/value heads use SELU instead of ReLU.
+This year, the evidence became impossible to ignore: In **PPO-based code optimization**, the *Pearl* system (2025) [uses SELU inside its actor–critic MLPs](https://arxiv.org/abs/2506.01880) and reports substantially smoother training dynamics during policy updates. HPC scheduling frameworks such as [InEPS](https://link.springer.com/article/10.1007/s11227-024-06907-y) apply SELU in their PPO actor–critic networks to tame exploding/vanishing activations caused by heterogeneous inputs and reward signals. Multi-objective RL, e.g., [latent-conditioned policy gradient methods](https://link.springer.com/chapter/10.1007/978-3-031-44223-0_6) increasingly defaults to **SELU for all hidden layers**, because it simply behaves more predictably under policy-gradient noise. I think the pattern is the following: Whenever RL systems avoid batch normalization (which they usually want or must), SELU becomes one of the most stable activations for deep value functions and stochastic policies. 
+
 
 ### Graph convolutional networks consistently replace ReLU with SELU for better convergence and robustness
 A growing line of **graph clustering** (DMoN, DGCLUSTER, MetaGC, Potts-GNN, differentiable community detection) and **privacy-preserving GNN** work (LPGNN, GAP, UPGNET) consistently replaces ReLU with SELU and reports better convergence or robustness. While the full SNN theory doesn’t directly apply to message-passing, a shallow GNN layer is still “linear aggregation + nonlinearity,” and SELU’s self-normalizing behavior seems to provide more stable training in normalization-free, noisy, or shallow GNN settings.
+
+### AI is hitting a wall in drug discovery
+We've re-evaluated machine-learning and deep learning methods from the last 25 years at the Tox21 Data Challenge dataset. Ok, LLMs can do this at least a bit -- but far off any reasonable performance. Recent methods like GNNs are a bit behing state-of-the-art, but we were actually extremely suprised that the SELU-networks from 2017 still perform best on this [Tox21 leaderboard](https://huggingface.co/spaces/ml-jku/tox21_leaderboard). People were wondering why AI hasn't found a new drug yet, nor has improved drug discovery a lot.. yeah, this might be a hint. Deep Learning methods are good at DESIGNING molecules, and are brilliant at MAKING them (in the sense of predicting chemical synthesis routes), but AI systems are obviously BAD AT TESTING those molecules. By TESTING, i mean virtually testing them by predicting their biological properties, such as toxic effects. Well, suprisingly we have to improve the TEST in the DESIGN-MAKE-TEST-ANALYSE cycle.
 
 
 # Papers, models and architectures built on Self-Normalizing Networks (SELU / SNN)
