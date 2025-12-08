@@ -134,8 +134,6 @@ We've re-evaluated machine-learning and deep learning methods from the last 25 y
 ## Time series & Foundation(-style) models
 - [Zero-shot Imputation with Foundation Inference Models for Dynamical Systems (ICLR 2025)](https://arxiv.org/abs/2402.07594):
   Uses SELU as activation for all feed-forward networks in FIM/FIM-ℓ modules.
-- [Foundation Inference Models for Stochastic Differential Equations (2025)](https://arxiv.org/abs/2502.19049):
-  Follow-up foundation-style work in the same line (check architecture details for continued SELU use).
 - [Towards Foundation Inference Models that Learn ODEs In-Context (2025)](https://arxiv.org/abs/2510.12650):
   Extends the FIM line toward in-context ODE learning.
 
