@@ -3,19 +3,29 @@
 
 It has been a wild year in AI and especially for self-normalizing networks and SELU activations.
 
-- Normalization-Free Transformers (LeCun et al.) rediscovering controlled signal propagation.
-- SELU as the default in Conditional Flow Matching (CFM, SB, MMFM) — the 3×64 baseline phenomenon.
+- [Normalization-Free Transformers](https://arxiv.org/abs/2503.10622) rediscovering controlled signal propagation.
+- SELU as the default in [Conditional Flow Matching works](https://arxiv.org/abs/2302.00482) — the 3×64 baseline phenomenon.
 - SELU in Time-Series Foundation Models ([FIM/FIM-ℓ](https://openreview.net/forum?id=NPSZ7V1CCY), [Flowstate](https://arxiv.org/abs/2508.05287)).
 - [SELU-transformer](https://ieeexplore.ieee.org/abstract/document/10957007?casa_token=TgFEKMg4iUkAAAAA:utZNYo98h6-_FVKzJwdPlLUEiK-reLFE802g8X1IuRuAbDkl0JEB8-2hTNC6ZisxVpWYWQ7HP1zt) resurgence in specialized NLP and tabular domains, as [TabTranSELU](https://doi.org/10.54254/2755-2721/51/20241174).
-- RL systems using SELU for stability in [PPO](https://arxiv.org/abs/2506.01880) / MARL, e.g. for code optimization.
+- RL systems using SELU for stability in [PPO](https://arxiv.org/abs/2506.01880), e.g. for code optimization.
 - Graph Convolutional Networks (GCN) use SELU activations since [DMoN](https://arxiv.org/abs/2006.16904). In 2025, methods like [GyralNet](https://arxiv.org/abs/2503.19823), use design as standard.
-- AI systems in drug discovery still dominated by SNNs -- AI is hitting a wall in drug discovery
+- [AI systems in drug discovery still dominated by SNNs](https://arxiv.org/abs/2511.14744) -- AI is hitting a wall in drug discovery
 
 
-- In March 2025, I saw ["Transformers without normalization"](https://arxiv.org/abs/2503.10622) by Yann LeCun and colleagues drop on arxiv. I thought "now they finanly have it", because Yann has been thinking in similar directions as I did already back in his "Efficient Backprop" tutorial. After all, self-normalizing networks require the initialization named after him ("LeCun's initialization"). Strangely it's just a scaled tanh-activation that does the job.. ok!
-- Then we got all this nice work on **conditional flow matching**: here 2 or 3 layer SELU-networks with a width of 64 have quasi become standard since Alex Tong's work and [implementation in torch CMF](https://github.com/atong01/conditional-flow-matching/blob/main/torchcfm/models/models.py). Here the SELU-network represents the derivative of another function -- here the smoothness of SELU networks, i.e. smooth derivative of the other furnction, is clearly the improvement over ReLU networks.
-- 2025 was clearly the year of **time-series foundation models** and I am very happy that we had a part in this. Clearly our [TiRex](https://arxiv.org/abs/2505.23719) taking the lead in the GIFTEval leaderboard (ahead of Amazon's Chronos) was one of my favourite moments in 2025. However, the other foundation models, like FIM/FIM-ℓ, SDE-FIM, [Flowstate](https://arxiv.org/abs/2508.05287), they all use SELU activations.
-- A growing line of **graph clustering** (DMoN, DGCLUSTER, MetaGC, Potts-GNN, differentiable community detection) and **privacy-preserving GNN** work (LPGNN, GAP, UPGNET) consistently replaces ReLU with SELU and reports better convergence or robustness. While the full SNN theory doesn’t directly apply to message-passing, a shallow GNN layer is still “linear aggregation + nonlinearity,” and SELU’s self-normalizing behavior seems to provide more stable training in normalization-free, noisy, or shallow GNN settings.
+### Normalization-free Transformers. Will we get LLMs without normalization layers?
+In March 2025, I saw ["Transformers without normalization"](https://arxiv.org/abs/2503.10622) by Yann LeCun and colleagues drop on arxiv. I thought "now they finanly have it", because Yann has been thinking in similar directions as I did already back in his "Efficient Backprop" tutorial. After all, self-normalizing networks require the initialization named after him ("LeCun's initialization"). Strangely it's just a scaled tanh-activation that does the job.. ok!
+
+### The 3x64 baseline phenomenon in conditional flow matching and Schrödinger bridges
+Then we got all this nice work on **conditional flow matching**: here 2 or 3 layer SELU-networks with a width of 64 have quasi become standard since Alex Tong's work and [implementation in torch CMF](https://github.com/atong01/conditional-flow-matching/blob/main/torchcfm/models/models.py). Here the SELU-network represents the derivative of another function -- here the smoothness of SELU networks, i.e. smooth derivative of the other furnction, is clearly the improvement over ReLU networks.
+
+### Time-series foundation models rely on SELU
+2025 was clearly the year of **time-series foundation models** and I am very happy that we had a part in this. Clearly our [TiRex](https://arxiv.org/abs/2505.23719) taking the lead in the [GIFT Eval] leaderboard](https://huggingface.co/spaces/Salesforce/GIFT-Eval) (ahead of Amazon's Chronos) was one of my favourite moments in 2025. However, the other foundation models, like FIM/FIM-ℓ, SDE-FIM, [Flowstate](https://arxiv.org/abs/2508.05287), they all use SELU activations.
+
+### RL systems use SELU for stability
+
+### Graph convolutional networks consistently replace ReLU with SELU for better convergence and robustness
+A growing line of **graph clustering** (DMoN, DGCLUSTER, MetaGC, Potts-GNN, differentiable community detection) and **privacy-preserving GNN** work (LPGNN, GAP, UPGNET) consistently replaces ReLU with SELU and reports better convergence or robustness. While the full SNN theory doesn’t directly apply to message-passing, a shallow GNN layer is still “linear aggregation + nonlinearity,” and SELU’s self-normalizing behavior seems to provide more stable training in normalization-free, noisy, or shallow GNN settings.
+
 
 # Papers, models and architectures built on Self-Normalizing Networks (SELU / SNN)
 
